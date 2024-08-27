@@ -14,6 +14,8 @@ services:
       - INPUT_TOPIC=$INPUT_TOPIC
       - WHEEL_DISTNCE=$WHEEL_DISTNCE
       - MAX_WHEEL_SPEED=$MAX_WHEEL_SPEED
+    volumes:
+      - ./host_directory:/container_directory
     command: ros2 launch template_pkg template_pkg.launch.py
 
   pub_and_sub_pkg:
